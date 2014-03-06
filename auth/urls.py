@@ -1,5 +1,6 @@
 
 from django.conf.urls import patterns,url
+from django.http.response import HttpResponse
 
 
 
@@ -17,6 +18,7 @@ urlpatterns = patterns('auth.views',
     
     url(r'^validate$','authenticate.v_validate'),
     url(r'^recoverPassword$','authenticate.v_recoverPassword'),
+    url(r'^webo$',lambda req:HttpResponse("done")),
     #url(r'^validate2/$','authenticate.v_validate2'),      
     #url(r'^test$','authenticate.v_test'),
 )
